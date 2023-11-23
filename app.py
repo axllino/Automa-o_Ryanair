@@ -19,7 +19,7 @@ def iniciar_driver():
         chrome_options.add_argument(argument)
     chrome_options.add_experimental_option('prefs', {
         # Auterar o local padrão do download de arquivos
-        'download.default_directory': 'C:\\Users\\lino\Desktop\\Passagens RYANAIR\\download',
+        'download.default_directory': 'C:\\Users\\lino\\Desktop\\Passagens RYANAIR\\Automa-o_Ryanair\\download',
         # Notificar o google chrome sobre essa auteração
         'download.directory_upgrade': True,
         # Desabilitar a confirmação de download
@@ -127,7 +127,7 @@ iniciar_sessao_mais_tarde.click()
 sleep(2)
 
 dropdown_01 = driver.find_element(
-    By.XPATH, '//button[@class="dropdown__toggle body-l-lg body-l-sm"]')
+    By.XPATH, '//button[@class="dropdown__toggle body-l-lg body-l-sm"]/p[0]')
 
 driver.execute_script("arguments[0].scrollIntoView();", dropdown_01)
 sleep(3)
